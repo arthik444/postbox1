@@ -1,0 +1,8 @@
+{
+  "name": "Post-Box",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

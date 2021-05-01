@@ -56,6 +56,37 @@ export class GlobalService {
       4,
       10
     ),
+    new Invoice(
+      '3',
+      'https://image.shutterstock.com/image-photo/fitness-meditation-healthy-lifestyle-concept-600w-1418433128.jpg',
+      'Durga Traders',
+      'Srivnivas foods',
+      true,
+      2500,
+      5,
+      7
+    ),
+    new Invoice(
+      '5',
+      'https://image.shutterstock.com/image-photo/happy-millennial-african-american-man-600w-1660490494.jpg',
+      'Durga Traders',
+      'Srikanth gift shop',
+      true,
+      5000,
+      4,
+      10
+    ),
+    new Invoice(
+      '1',
+      'https://image.shutterstock.com/image-photo/young-business-man-working-home-600w-1654831870.jpg',
+      'Durga Traders',
+      'Srivnivas mobiles',
+      true,
+      2000,
+      0,
+      5
+    ),
+
   ]
   get invoice(){
     return [...this.invoices];

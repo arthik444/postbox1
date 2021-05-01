@@ -1,56 +1,81 @@
-<ion-toolbar>
-  <ion-buttons slot="secondary">
-    <ion-button>
-      <ion-icon slot="icon-only" name="person-circle"></ion-icon>
-    </ion-button>
-    <ion-button>
-      <ion-icon slot="icon-only" name="search"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-  <ion-buttons slot="primary">
-    <ion-button color="secondary">
-      <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-  <ion-title>
-PostBox
-  </ion-title>
-</ion-toolbar>
-
-
-
 <ion-content>
-
-  <ion-item-sliding  *ngFor="let invoice of loadedInvoices" [routerLink]="['/','account-deail']" id="invoice.id">
-    <ion-item >
-      <ion-avatar item-left>
-        <img [src]="invoice.imageUrl">
+  <div class="top-section ion-padding">
+    <div class="top-menu">
+      <ion-icon name="menu" slot="start"></ion-icon>
+      <ion-avatar>
+        <img src="../../../assets/profile_pic.svg" alt="profile_pic">
       </ion-avatar>
-      <ion-label>
-        <h2>{{ invoice.recieverName }}</h2>
-        <p>A new message in your network</p>
-        <p>Oceanic Next has joined your network</p>
-      </ion-label>
-      <ion-note slot="end">
-        {{ invoice.paymentAmount | currency }}
-      </ion-note>
-    </ion-item>
+    </div>
+    <div class="title">
+      <h2 >Hi, Ruthvik! Welcome to PostBox</h2>
 
-    <ion-item-options side="start">
-      <ion-item-option>
-        <ion-icon slot="icon-only" name="archive-outline"></ion-icon>
-      </ion-item-option>
-    </ion-item-options>
 
-    <ion-item-options side="end">
-      <ion-item-option color="danger">
-        <ion-icon slot="icon-only" name="trash"></ion-icon>
-      </ion-item-option>
-      <ion-item-option>
-        <ion-icon slot="icon-only" name="star"></ion-icon>
-      </ion-item-option>
-    </ion-item-options>
-  </ion-item-sliding>
+    </div>
+    <div class="featured">
+      <h4>Featured:</h4>
+      <ion-card>
+        <ion-card-content>
+          <img src="../../../assets/SVGs/health-elderly.svg" alt="covid-help">
+        <p>During these challenging times, try to help yourself and those around you.</p>
+        </ion-card-content>
+
+      </ion-card>
+    </div>
+  </div>
+  <div class="mid-section ion-padding">
+    <h3>Quick Access</h3>
+    <div class="content">
+      <ion-row>
+        <ion-col size="4" class="quick-access">
+          <img  src="../../../assets/create.svg" alt="create">
+            <p>Create</p>
+
+        </ion-col>
+        <ion-col size="4" class="quick-access-img">
+          <img src="../../../assets/recieve.svg" alt="recieve">
+          <p>Recieve</p>
+        </ion-col>
+        <ion-col size="4" class="quick-access-img">
+          <img src="../../../assets/contacts.svg" alt="contacts">
+          <p>Contacts</p>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+  <div class="issues ion-padding">
+    <h2>Issues Raised!</h2>
+    <ion-icon name="chatbox-ellipses"></ion-icon>
+    <ion-item-sliding  *ngFor="let invoice of loadedInvoices" [routerLink]="['/','account-deail']" id="invoice.id">
+      <ion-item >
+        <ion-avatar item-left>
+          <img [src]="invoice.imageUrl">
+        </ion-avatar>
+        <ion-label>
+          <h2>{{ invoice.recieverName }}</h2>
+          <p>A new message in your network</p>
+          <p>Oceanic Next has joined your network</p>
+        </ion-label>
+        <ion-note slot="end">
+          {{ invoice.paymentAmount | currency }}
+        </ion-note>
+      </ion-item>
+
+      <ion-item-options side="start">
+        <ion-item-option>
+          <ion-icon slot="icon-only" name="archive-outline"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+      <ion-item-options side="end">
+        <ion-item-option color="danger">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-item-option>
+        <ion-item-option>
+          <ion-icon slot="icon-only" name="star"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </div>
 </ion-content>
 
 
